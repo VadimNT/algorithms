@@ -1,12 +1,12 @@
 import re
 
 
-def main():
-    line = (input()).lower()
-    line = line.replace(' ', '')
-    line = re.sub(r'[.,"\'-?:!;]', '', line)
-    print(True if line == line[::-1] else False)
+def check_palindrome(data: str) -> bool:
+    data = data.lower().replace(' ', '')
+    data = re.sub(r'[.,;:?!"\']', '', data)
+    return True if data == data[::-1] else False
 
 
 if __name__ == '__main__':
-    main()
+    in_str = input()
+    print(check_palindrome(in_str))

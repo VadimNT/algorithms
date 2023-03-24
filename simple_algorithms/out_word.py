@@ -1,15 +1,10 @@
-def main():
-    str1 = input()
-    str2 = input()
-    m = len(str2)
-    for i in range(m):
-        s = str2[i]
-        if s in str1:
-            str1 = str1.replace(s, '', 1)
-        else:
-            print(s)
-            break
+def get_out_word(s, t):
+    for word in s:
+        t.remove(word)
+    return t[0]
 
 
 if __name__ == '__main__':
-    main()
+    in_s = list(input())
+    in_t = list(input())
+    print(get_out_word(in_s, in_t))

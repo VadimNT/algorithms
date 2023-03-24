@@ -1,9 +1,10 @@
-arr = list(map(int, input().split()))
-
-
-def func(array):
+def func(in_data):
+    a, x, b, c = (value for value in in_data)
     return print(
-        array[0] * array[1] * array[1] + array[2] * array[1] + array[3])
+        a * x ** 2 + b * x + c
+    )
 
 
-func(arr)
+if __name__ == '__main__':
+    in_list = [int(i) for i in input().split()]
+    func(in_list)
